@@ -1,0 +1,12 @@
+chatapp/
+.env
+__pycache__/
+db.sqlite3
+*.png
+*.jpeg
+*.jpg
+migrations/
+static/
+staticfiles/
+username.py
+dumps.py
