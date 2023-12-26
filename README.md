@@ -68,3 +68,16 @@ TILL HERE YOU HAVE COMPLETED ONE PART THAT IS, YOUR MESSAGE IS VISIBLE BETWEEN S
 
 NOW TO BROADCAST OR TO MAKE IT VISIBLE TO EVERYONE YOU HAVE TO USE CHANNEL LAYER
 
+open settings.py add:
+
+CHANNEL_LAYERS = {
+    'default':{
+        'BACKEND':'channels.layers.InMemoryChannelLayer'
+    }
+}
+
+using InMemoryChannelLayer for development purposes, we have to integrate redis for production env.
+
+
+now open consumers.py and import async to sync
+from asgiref.sync import async_to_sync
